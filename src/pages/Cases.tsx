@@ -282,7 +282,7 @@ export const Cases: React.FC = () => {
         </div>
 
         {/* Row 2: Select Filters */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.04)', paddingTop: '1rem' }} className="grid-cols-kpi">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.04)', paddingTop: '1rem' }}>
           {/* Category */}
           <select
             value={filterCategory}
@@ -583,7 +583,7 @@ export const Cases: React.FC = () => {
             </div>
 
             <form onSubmit={handleSubmit(onEditSubmit)} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="grid-cols-kpi">
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem' }}>
                 
                 {/* Title */}
                 <div style={{ gridColumn: 'span 2' }}>

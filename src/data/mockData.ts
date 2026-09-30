@@ -82,26 +82,26 @@ export interface AuditLog {
 // 20 INVESTIGATORS
 // ==========================================
 export const initialInvestigators: Investigator[] = [
-  { id: 'INV-001', name: 'Det. Sarah Jenkins', rank: 'Senior Inspector', specialty: 'Phishing & Email Spoofing', email: 's.jenkins@ccms.gov', phone: '+1-202-555-0101', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150', activeCases: 3 },
-  { id: 'INV-002', name: 'Det. Marcus Vance', rank: 'Lead Forensic Examiner', specialty: 'Ransomware & Malware Analysis', email: 'm.vance@ccms.gov', phone: '+1-202-555-0102', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150', activeCases: 2 },
-  { id: 'INV-003', name: 'Det. Elena Rostova', rank: 'Cyber Detective', specialty: 'Cryptocurrency Scams', email: 'e.rostova@ccms.gov', phone: '+1-202-555-0103', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150', activeCases: 2 },
-  { id: 'INV-004', name: 'Insp. David Kim', rank: 'Senior Cyber Forensic Analyst', specialty: 'Data Breach & Networks', email: 'd.kim@ccms.gov', phone: '+1-202-555-0104', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150', activeCases: 2 },
-  { id: 'INV-005', name: 'Inv. Aisha Bello', rank: 'Cyber Detective', specialty: 'Online Banking Fraud', email: 'a.bello@ccms.gov', phone: '+1-202-555-0105', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150', activeCases: 2 },
-  { id: 'INV-006', name: 'Insp. Thomas Wright', rank: 'Technical Analyst', specialty: 'Malware Attacks', email: 't.wright@ccms.gov', phone: '+1-202-555-0106', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150', activeCases: 1 },
-  { id: 'INV-007', name: 'Det. Chloe Dupont', rank: 'Investigator', specialty: 'Cyber Stalking & Social Media', email: 'c.dupont@ccms.gov', phone: '+1-202-555-0107', avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150', activeCases: 2 },
-  { id: 'INV-008', name: 'Det. James Cooper', rank: 'Cyber Inspector', specialty: 'Identity Theft', email: 'j.cooper@ccms.gov', phone: '+1-202-555-0108', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150', activeCases: 2 },
-  { id: 'INV-009', name: 'Insp. Yuki Tanaka', rank: 'Senior Analyst', specialty: 'Network Forensics', email: 'y.tanaka@ccms.gov', phone: '+1-202-555-0109', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150', activeCases: 1 },
-  { id: 'INV-010', name: 'Det. Carlos Mendez', rank: 'Inspector', specialty: 'Cryptocurrency Scams', email: 'c.mendez@ccms.gov', phone: '+1-202-555-0110', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150', activeCases: 1 },
-  { id: 'INV-011', name: 'Inv. Liam O\'Connor', rank: 'Detective', specialty: 'Phishing', email: 'l.oconnor@ccms.gov', phone: '+1-202-555-0111', avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150', activeCases: 1 },
-  { id: 'INV-012', name: 'Inv. Priya Patel', rank: 'Forensic Analyst', specialty: 'Identity Theft', email: 'p.patel@ccms.gov', phone: '+1-202-555-0112', avatar: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150', activeCases: 1 },
-  { id: 'INV-013', name: 'Det. Emma Watson', rank: 'Investigator', specialty: 'Ransomware', email: 'e.watson@ccms.gov', phone: '+1-202-555-0113', avatar: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?w=150', activeCases: 1 },
-  { id: 'INV-014', name: 'Inv. Omar Farooq', rank: 'Detective', specialty: 'Online Banking Fraud', email: 'o.farooq@ccms.gov', phone: '+1-202-555-0114', avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150', activeCases: 2 },
-  { id: 'INV-015', name: 'Det. Sofia Lindstrom', rank: 'Senior Analyst', specialty: 'Data Breach', email: 's.lindstrom@ccms.gov', phone: '+1-202-555-0115', avatar: 'https://images.unsplash.com/photo-1548142813-c348350df52b?w=150', activeCases: 1 },
-  { id: 'INV-016', name: 'Inv. Hans Mueller', rank: 'Forensic Analyst', specialty: 'Malware Attack', email: 'h.mueller@ccms.gov', phone: '+1-202-555-0116', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150', activeCases: 1 },
-  { id: 'INV-017', name: 'Det. Alex Mercer', rank: 'Detective', specialty: 'Cyber Stalking', email: 'a.mercer@ccms.gov', phone: '+1-202-555-0117', avatar: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=150', activeCases: 1 },
-  { id: 'INV-018', name: 'Inv. Isabella Rossi', rank: 'Analyst', specialty: 'Social Media Fraud', email: 'i.rossi@ccms.gov', phone: '+1-202-555-0118', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150', activeCases: 1 },
-  { id: 'INV-019', name: 'Det. John Doe', rank: 'Inspector', specialty: 'Email Spoofing', email: 'j.doe@ccms.gov', phone: '+1-202-555-0119', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150', activeCases: 0 },
-  { id: 'INV-020', name: 'Inv. Lucas Silva', rank: 'Analyst', specialty: 'Cryptocurrency Scams', email: 'l.silva@ccms.gov', phone: '+1-202-555-0120', avatar: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150', activeCases: 1 }
+  { id: 'INV-001', name: 'Det. Sarah Jenkins', rank: 'Senior Inspector', specialty: 'Phishing & Email Spoofing', email: 's.jenkins@cybertrace.gov', phone: '+1-202-555-0101', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150', activeCases: 3 },
+  { id: 'INV-002', name: 'Det. Marcus Vance', rank: 'Lead Forensic Examiner', specialty: 'Ransomware & Malware Analysis', email: 'm.vance@cybertrace.gov', phone: '+1-202-555-0102', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150', activeCases: 2 },
+  { id: 'INV-003', name: 'Det. Elena Rostova', rank: 'Cyber Detective', specialty: 'Cryptocurrency Scams', email: 'e.rostova@cybertrace.gov', phone: '+1-202-555-0103', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150', activeCases: 2 },
+  { id: 'INV-004', name: 'Insp. David Kim', rank: 'Senior Cyber Forensic Analyst', specialty: 'Data Breach & Networks', email: 'd.kim@cybertrace.gov', phone: '+1-202-555-0104', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150', activeCases: 2 },
+  { id: 'INV-005', name: 'Inv. Aisha Bello', rank: 'Cyber Detective', specialty: 'Online Banking Fraud', email: 'a.bello@cybertrace.gov', phone: '+1-202-555-0105', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150', activeCases: 2 },
+  { id: 'INV-006', name: 'Insp. Thomas Wright', rank: 'Technical Analyst', specialty: 'Malware Attacks', email: 't.wright@cybertrace.gov', phone: '+1-202-555-0106', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150', activeCases: 1 },
+  { id: 'INV-007', name: 'Det. Chloe Dupont', rank: 'Investigator', specialty: 'Cyber Stalking & Social Media', email: 'c.dupont@cybertrace.gov', phone: '+1-202-555-0107', avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150', activeCases: 2 },
+  { id: 'INV-008', name: 'Det. James Cooper', rank: 'Cyber Inspector', specialty: 'Identity Theft', email: 'j.cooper@cybertrace.gov', phone: '+1-202-555-0108', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150', activeCases: 2 },
+  { id: 'INV-009', name: 'Insp. Yuki Tanaka', rank: 'Senior Analyst', specialty: 'Network Forensics', email: 'y.tanaka@cybertrace.gov', phone: '+1-202-555-0109', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150', activeCases: 1 },
+  { id: 'INV-010', name: 'Det. Carlos Mendez', rank: 'Inspector', specialty: 'Cryptocurrency Scams', email: 'c.mendez@cybertrace.gov', phone: '+1-202-555-0110', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150', activeCases: 1 },
+  { id: 'INV-011', name: 'Inv. Liam O\'Connor', rank: 'Detective', specialty: 'Phishing', email: 'l.oconnor@cybertrace.gov', phone: '+1-202-555-0111', avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150', activeCases: 1 },
+  { id: 'INV-012', name: 'Inv. Priya Patel', rank: 'Forensic Analyst', specialty: 'Identity Theft', email: 'p.patel@cybertrace.gov', phone: '+1-202-555-0112', avatar: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150', activeCases: 1 },
+  { id: 'INV-013', name: 'Det. Emma Watson', rank: 'Investigator', specialty: 'Ransomware', email: 'e.watson@cybertrace.gov', phone: '+1-202-555-0113', avatar: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?w=150', activeCases: 1 },
+  { id: 'INV-014', name: 'Inv. Omar Farooq', rank: 'Detective', specialty: 'Online Banking Fraud', email: 'o.farooq@cybertrace.gov', phone: '+1-202-555-0114', avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150', activeCases: 2 },
+  { id: 'INV-015', name: 'Det. Sofia Lindstrom', rank: 'Senior Analyst', specialty: 'Data Breach', email: 's.lindstrom@cybertrace.gov', phone: '+1-202-555-0115', avatar: 'https://images.unsplash.com/photo-1548142813-c348350df52b?w=150', activeCases: 1 },
+  { id: 'INV-016', name: 'Inv. Hans Mueller', rank: 'Forensic Analyst', specialty: 'Malware Attack', email: 'h.mueller@cybertrace.gov', phone: '+1-202-555-0116', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150', activeCases: 1 },
+  { id: 'INV-017', name: 'Det. Alex Mercer', rank: 'Detective', specialty: 'Cyber Stalking', email: 'a.mercer@cybertrace.gov', phone: '+1-202-555-0117', avatar: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=150', activeCases: 1 },
+  { id: 'INV-018', name: 'Inv. Isabella Rossi', rank: 'Analyst', specialty: 'Social Media Fraud', email: 'i.rossi@cybertrace.gov', phone: '+1-202-555-0118', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150', activeCases: 1 },
+  { id: 'INV-019', name: 'Det. John Doe', rank: 'Inspector', specialty: 'Email Spoofing', email: 'j.doe@cybertrace.gov', phone: '+1-202-555-0119', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150', activeCases: 0 },
+  { id: 'INV-020', name: 'Inv. Lucas Silva', rank: 'Analyst', specialty: 'Cryptocurrency Scams', email: 'l.silva@cybertrace.gov', phone: '+1-202-555-0120', avatar: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150', activeCases: 1 }
 ];
 
 // ==========================================
@@ -804,15 +804,15 @@ export const initialEvidence: Evidence[] = Array.from({ length: 50 }).map((_, i)
 // AUDIT LOGS
 // ==========================================
 export const initialAuditLogs: AuditLog[] = [
-  { id: 'LOG-001', user: 'admin@ccms.gov', role: 'Admin', action: 'User Login', date: '2026-08-05', time: '08:30:12', ipAddress: '192.168.10.45', status: 'Success' },
-  { id: 'LOG-002', user: 'm.vance@ccms.gov', role: 'Investigator', action: 'User Login', date: '2026-08-05', time: '08:42:01', ipAddress: '192.168.10.88', status: 'Success' },
-  { id: 'LOG-003', user: 'm.vance@ccms.gov', role: 'Investigator', action: 'Case Update', date: '2026-08-05', time: '08:55:34', ipAddress: '192.168.10.88', status: 'Success' },
-  { id: 'LOG-004', user: 's.jenkins@ccms.gov', role: 'Investigator', action: 'User Login', date: '2026-08-05', time: '09:02:11', ipAddress: '192.168.12.19', status: 'Success' },
-  { id: 'LOG-005', user: 's.jenkins@ccms.gov', role: 'Investigator', action: 'Evidence Upload', date: '2026-08-05', time: '09:12:45', ipAddress: '192.168.12.19', status: 'Success' },
-  { id: 'LOG-006', user: 'e.rostova@ccms.gov', role: 'Investigator', action: 'User Login', date: '2026-08-05', time: '09:15:00', ipAddress: '192.168.10.99', status: 'Success' },
-  { id: 'LOG-007', user: 'e.rostova@ccms.gov', role: 'Investigator', action: 'Report Generation', date: '2026-08-05', time: '09:20:18', ipAddress: '192.168.10.99', status: 'Success' },
-  { id: 'LOG-008', user: 'forensic.analyst@ccms.gov', role: 'Forensic Analyst', action: 'User Login', date: '2026-08-05', time: '09:22:33', ipAddress: '192.168.10.12', status: 'Success' },
-  { id: 'LOG-009', user: 'forensic.analyst@ccms.gov', role: 'Forensic Analyst', action: 'Evidence Upload', date: '2026-08-05', time: '09:25:01', ipAddress: '192.168.10.12', status: 'Success' },
-  { id: 'LOG-010', user: 'unknown@ccms.gov', role: 'Admin', action: 'Failed Login Attempt', date: '2026-08-05', time: '09:27:00', ipAddress: '103.22.45.19', status: 'Failed' },
-  { id: 'LOG-011', user: 'admin@ccms.gov', role: 'Admin', action: 'Case Creation', date: '2026-08-05', time: '09:28:11', ipAddress: '192.168.10.45', status: 'Success' }
+  { id: 'LOG-001', user: 'admin@cybertrace.gov', role: 'Admin', action: 'User Login', date: '2026-08-05', time: '08:30:12', ipAddress: '192.168.10.45', status: 'Success' },
+  { id: 'LOG-002', user: 'm.vance@cybertrace.gov', role: 'Investigator', action: 'User Login', date: '2026-08-05', time: '08:42:01', ipAddress: '192.168.10.88', status: 'Success' },
+  { id: 'LOG-003', user: 'm.vance@cybertrace.gov', role: 'Investigator', action: 'Case Update', date: '2026-08-05', time: '08:55:34', ipAddress: '192.168.10.88', status: 'Success' },
+  { id: 'LOG-004', user: 's.jenkins@cybertrace.gov', role: 'Investigator', action: 'User Login', date: '2026-08-05', time: '09:02:11', ipAddress: '192.168.12.19', status: 'Success' },
+  { id: 'LOG-005', user: 's.jenkins@cybertrace.gov', role: 'Investigator', action: 'Evidence Upload', date: '2026-08-05', time: '09:12:45', ipAddress: '192.168.12.19', status: 'Success' },
+  { id: 'LOG-006', user: 'e.rostova@cybertrace.gov', role: 'Investigator', action: 'User Login', date: '2026-08-05', time: '09:15:00', ipAddress: '192.168.10.99', status: 'Success' },
+  { id: 'LOG-007', user: 'e.rostova@cybertrace.gov', role: 'Investigator', action: 'Report Generation', date: '2026-08-05', time: '09:20:18', ipAddress: '192.168.10.99', status: 'Success' },
+  { id: 'LOG-008', user: 'forensic.analyst@cybertrace.gov', role: 'Forensic Analyst', action: 'User Login', date: '2026-08-05', time: '09:22:33', ipAddress: '192.168.10.12', status: 'Success' },
+  { id: 'LOG-009', user: 'forensic.analyst@cybertrace.gov', role: 'Forensic Analyst', action: 'Evidence Upload', date: '2026-08-05', time: '09:25:01', ipAddress: '192.168.10.12', status: 'Success' },
+  { id: 'LOG-010', user: 'unknown@cybertrace.gov', role: 'Admin', action: 'Failed Login Attempt', date: '2026-08-05', time: '09:27:00', ipAddress: '103.22.45.19', status: 'Failed' },
+  { id: 'LOG-011', user: 'admin@cybertrace.gov', role: 'Admin', action: 'Case Creation', date: '2026-08-05', time: '09:28:11', ipAddress: '192.168.10.45', status: 'Success' }
 ];

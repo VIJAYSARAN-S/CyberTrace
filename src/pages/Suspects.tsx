@@ -172,7 +172,7 @@ export const Suspects: React.FC = () => {
       </div>
 
       {/* Suspect Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }} className="grid-cols-kpi">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: '1rem' }}>
         {filteredSuspects.map((sus) => {
           const isHighlighted = sus.id === selectedSusId;
           return (
@@ -216,7 +216,7 @@ export const Suspects: React.FC = () => {
                 </div>
 
                 <div style={{ marginTop: '0.5rem' }}>
-                  <h4 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1', margin: 0 }}>{sus.name || 'Unknown Identification'}</h4>
+                  <h4 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', margin: 0 }}>{sus.name || 'Unknown Identification'}</h4>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', marginTop: '0.25rem' }}>
                     <span style={{ fontSize: '10.5px', color: '#4b4a48', fontWeight: 550 }}>Alias:</span>
                     <span style={{
@@ -420,6 +420,8 @@ export const Suspects: React.FC = () => {
             borderRadius: '16px',
             padding: '1.75rem',
             boxShadow: '0 30px 80px rgba(0,0,0,0.7)',
+            maxHeight: '90vh',
+            overflowY: 'auto',
             fontFamily: 'Inter, sans-serif'
           }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg, transparent, rgba(99,130,255,0.3), transparent)' }} />

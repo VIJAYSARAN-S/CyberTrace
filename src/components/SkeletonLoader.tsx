@@ -63,13 +63,13 @@ export const SkeletonTable: React.FC<{ rows?: number }> = ({ rows = 5 }) => (
 export const SkeletonDashboard: React.FC = () => (
   <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', paddingTop: '1.75rem' }}>
     {/* KPI cards */}
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }}>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1rem' }}>
       {Array.from({ length: 4 }).map((_, i) => (
         <SkeletonCard key={i} />
       ))}
     </div>
     {/* Charts row */}
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '1.25rem' }}>
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px]" style={{ gap: '1.25rem' }}>
       {Array.from({ length: 2 }).map((_, i) => (
         <div key={i} style={{
           background: '#ffffff',

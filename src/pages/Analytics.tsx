@@ -175,7 +175,7 @@ export const Analytics: React.FC = () => {
       </div>
 
       {/* Summary Highlight Row */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }} className="grid-cols-kpi">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1rem' }}>
         <div style={{
           background: '#ffffff',
           border: '1px solid rgba(255,255,255,0.05)',
@@ -194,7 +194,7 @@ export const Analytics: React.FC = () => {
           }}><TrendingUp style={{ width: '16px', height: '16px', color: '#3b82f6' }} /></span>
           <div>
             <span style={{ fontSize: '8.5px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block' }}>Peak Month Activity</span>
-            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#cbd5e1', marginTop: '0.15rem', display: 'block' }}>July (14 cases)</span>
+            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#111111', marginTop: '0.15rem', display: 'block' }}>July (14 cases)</span>
           </div>
         </div>
         <div style={{
@@ -215,7 +215,7 @@ export const Analytics: React.FC = () => {
           }}><ShieldCheck style={{ width: '16px', height: '16px', color: '#10b981' }} /></span>
           <div>
             <span style={{ fontSize: '8.5px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block' }}>Case Resolution Rate</span>
-            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#cbd5e1', marginTop: '0.15rem', display: 'block' }}>
+            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#111111', marginTop: '0.15rem', display: 'block' }}>
               {((cases.filter(c => c.status === 'Closed').length / cases.length) * 100).toFixed(0)}%
             </span>
           </div>
@@ -238,7 +238,7 @@ export const Analytics: React.FC = () => {
           }}><Clock style={{ width: '16px', height: '16px', color: '#f59e0b' }} /></span>
           <div>
             <span style={{ fontSize: '8.5px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block' }}>Average Resolution</span>
-            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#cbd5e1', marginTop: '0.15rem', display: 'block' }}>12.4 Days</span>
+            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#111111', marginTop: '0.15rem', display: 'block' }}>12.4 Days</span>
           </div>
         </div>
         <div style={{
@@ -259,13 +259,13 @@ export const Analytics: React.FC = () => {
           }}><HardDrive style={{ width: '16px', height: '16px', color: '#6366f1' }} /></span>
           <div>
             <span style={{ fontSize: '8.5px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block' }}>Forensic Assets</span>
-            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#cbd5e1', marginTop: '0.15rem', display: 'block' }}>50 Files Ledger</span>
+            <span style={{ fontSize: '12.5px', fontWeight: 700, color: '#111111', marginTop: '0.15rem', display: 'block' }}>50 Files Ledger</span>
           </div>
         </div>
       </div>
 
       {/* Analytics Charts Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }} className="grid-cols-kpi">
+      <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '1.25rem' }}>
         
         {/* 1. Monthly Trends Area Chart */}
         <div style={{
@@ -276,7 +276,7 @@ export const Analytics: React.FC = () => {
           position: 'relative'
         }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(17,17,17,0.08), transparent)' }} />
-          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1', marginBottom: '1.25rem' }}>Monthly Incident Trend vs Resolution</h3>
+          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', marginBottom: '1.25rem' }}>Monthly Incident Trend vs Resolution</h3>
           <div style={{ height: '260px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={monthlyChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -310,7 +310,7 @@ export const Analytics: React.FC = () => {
           position: 'relative'
         }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(17,17,17,0.08), transparent)' }} />
-          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1', marginBottom: '1.25rem' }}>Crime Category Threat Load</h3>
+          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', marginBottom: '1.25rem' }}>Crime Category Threat Load</h3>
           <div style={{ height: '260px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart layout="vertical" data={categoryChartData.slice(0, 6)} margin={{ top: 0, right: 10, left: 25, bottom: 0 }}>
@@ -337,7 +337,7 @@ export const Analytics: React.FC = () => {
           position: 'relative'
         }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(17,17,17,0.08), transparent)' }} />
-          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1', marginBottom: '1.25rem' }}>Solved vs Pending Incidents</h3>
+          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', marginBottom: '1.25rem' }}>Solved vs Pending Incidents</h3>
           <div style={{ height: '260px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={solvedPendingChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -361,7 +361,7 @@ export const Analytics: React.FC = () => {
           position: 'relative'
         }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(17,17,17,0.08), transparent)' }} />
-          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1', marginBottom: '1.25rem' }}>Officer Assignments vs Resolution</h3>
+          <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', marginBottom: '1.25rem' }}>Officer Assignments vs Resolution</h3>
           <div style={{ height: '260px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={investigatorChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>

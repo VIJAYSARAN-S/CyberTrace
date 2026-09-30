@@ -11,6 +11,13 @@ export const DashboardLayout: React.FC = () => {
   const location = useLocation();
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   if (!currentUser) return <Navigate to="/login" replace />;
 
@@ -33,7 +40,7 @@ export const DashboardLayout: React.FC = () => {
           minWidth: 0,
           position: 'relative',
           zIndex: 1,
-          marginLeft: typeof window !== 'undefined' && window.innerWidth >= 768 ? sidebarWidth : 0,
+          marginLeft: isDesktop ? sidebarWidth : 0,
           transition: 'margin-left 250ms cubic-bezier(0.4, 0, 0.2, 1)'
         }}
       >
@@ -72,7 +79,7 @@ export const DashboardLayout: React.FC = () => {
           letterSpacing: '0.15em',
           textTransform: 'uppercase'
         }}>
-          CYBERFORGE • C-CCMS v2026.8 • FOR AUTHORIZED PERSONNEL ONLY
+          CYBERTRACE • CENTRALIZED CYBER CRIME CASE MANAGEMENT AND DIGITAL FORENSICS SYSTEM
         </footer>
       </div>
     </div>

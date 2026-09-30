@@ -93,7 +93,7 @@ export const Investigations: React.FC = () => {
       </div>
 
       {activeCases.length > 0 ? (
-        <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: '1.25rem' }} className="flex-col lg:flex-row">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr]" style={{ gap: '1.25rem' }}>
           
           {/* Active Cases Column */}
           <div style={{
@@ -109,7 +109,7 @@ export const Investigations: React.FC = () => {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '0.75rem' }}>
               <ListTodo style={{ width: '15px', height: '15px', color: '#3b82f6' }} />
-              <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1' }}>Assigned Worklist</h3>
+              <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#111111' }}>Assigned Worklist</h3>
             </div>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
@@ -139,7 +139,7 @@ export const Investigations: React.FC = () => {
                       <span style={{ fontSize: '11px', fontWeight: 700, fontFamily: "'JetBrains Mono', monospace", color: '#60a5fa' }}>{c.id}</span>
                       {getStatusBadge(c.status)}
                     </div>
-                    <h4 style={{ fontSize: '12px', fontWeight: 700, color: '#cbd5e1', marginTop: '0.5rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{c.title}</h4>
+                    <h4 style={{ fontSize: '12px', fontWeight: 700, color: '#111111', marginTop: '0.5rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{c.title}</h4>
                     
                     {/* Progress bar */}
                     <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
@@ -181,7 +181,7 @@ export const Investigations: React.FC = () => {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '0.875rem' }}>
                 <div>
                   <span style={{ fontSize: '11.5px', fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, color: '#60a5fa' }}>{currentSelectedCase.id}</span>
-                  <h3 style={{ fontSize: '14px', fontWeight: 800, color: '#cbd5e1', marginTop: '0.15rem' }}>{currentSelectedCase.title}</h3>
+                  <h3 style={{ fontSize: '14px', fontWeight: 800, color: '#111111', marginTop: '0.15rem' }}>{currentSelectedCase.title}</h3>
                 </div>
                 {getStatusBadge(status)}
               </div>
@@ -197,7 +197,7 @@ export const Investigations: React.FC = () => {
                 gap: '0.5rem'
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <h4 style={{ fontSize: '12.5px', fontWeight: 700, color: '#cbd5e1', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <h4 style={{ fontSize: '12.5px', fontWeight: 700, color: '#111111', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <TrendingUp style={{ width: '14px', height: '14px', color: '#3b82f6' }} />
                     Investigation Completion Rate
                   </h4>

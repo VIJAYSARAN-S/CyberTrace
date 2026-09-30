@@ -164,7 +164,7 @@ export const Victims: React.FC = () => {
       </div>
 
       {/* Victim Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }} className="grid-cols-kpi">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: '1rem' }}>
         {filteredVictims.map((vic) => {
           const isHighlighted = vic.id === selectedVicId;
           return (
@@ -208,7 +208,7 @@ export const Victims: React.FC = () => {
                 </div>
 
                 <div style={{ marginTop: '0.5rem' }}>
-                  <h4 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1', margin: 0 }}>{vic.name}</h4>
+                  <h4 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', margin: 0 }}>{vic.name}</h4>
                   <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '11.5px', fontWeight: 600 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#6b7280' }}>
                       <Mail style={{ width: '13px', height: '13px', color: '#5d5b57', flexShrink: 0 }} />
@@ -388,6 +388,8 @@ export const Victims: React.FC = () => {
             borderRadius: '16px',
             padding: '1.75rem',
             boxShadow: '0 30px 80px rgba(0,0,0,0.7)',
+            maxHeight: '90vh',
+            overflowY: 'auto',
             fontFamily: 'Inter, sans-serif'
           }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg, transparent, rgba(99,130,255,0.3), transparent)' }} />

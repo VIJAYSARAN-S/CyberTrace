@@ -43,7 +43,7 @@ export const Login: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const { register, handleSubmit, formState: { errors } } = useForm<LoginForm>({
-    defaultValues: { email: 'admin@ccms.gov', role: 'Admin' }
+    defaultValues: { email: 'admin@cybertrace.gov', role: 'Admin' }
   });
 
   const onSubmit = async (data: LoginForm) => {
@@ -107,10 +107,10 @@ export const Login: React.FC = () => {
           </div>
           <div>
             <h1 style={{ color: '#111111', fontWeight: 900, fontSize: '20px', letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-              C-CCMS
+              CyberTrace
             </h1>
             <p style={{ color: '#5d5b57', fontSize: '9px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-              Government Classified Portal
+              Centralized Forensics &amp; Case Management
             </p>
           </div>
         </div>
@@ -118,13 +118,13 @@ export const Login: React.FC = () => {
         {/* Hero text */}
         <div>
           <h2 style={{ color: '#111111', fontSize: '2.5rem', fontWeight: 900, lineHeight: 1.15, letterSpacing: '-0.02em', marginBottom: '1rem' }}>
-            Cyber Crime<br />
+            CyberTrace<br />
             <span style={{ background: '#111111', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              Command Center
+              Forensic Portal
             </span>
           </h2>
           <p style={{ color: '#5d5b57', fontSize: '13px', lineHeight: 1.7, maxWidth: '380px', marginBottom: '2rem' }}>
-            Federal-grade incident management platform for cybercrime investigation units. Secure. Scalable. Mission-critical.
+            Centralized cyber crime incident management platform and digital forensics system. Secure. Defensible. Scalable.
           </p>
 
           {/* Stats */}
@@ -182,7 +182,7 @@ export const Login: React.FC = () => {
         </div>
 
         <p style={{ color: '#111111', fontSize: '9.5px', fontWeight: 500, letterSpacing: '0.02em' }}>
-          © 2026 Federal Cyber Crime Monitoring Authority. All Rights Reserved.
+          © 2026 CyberTrace – Centralized Cyber Crime Case Management and Digital Forensics System. All Rights Reserved.
         </p>
       </motion.div>
 
@@ -214,8 +214,8 @@ export const Login: React.FC = () => {
               <Shield style={{ width: '20px', height: '20px', color: 'white' }} />
             </div>
             <div>
-              <h1 style={{ color: '#111111', fontWeight: 900, fontSize: '18px' }}>C-CCMS</h1>
-              <p style={{ color: '#5d5b57', fontSize: '9px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Government Portal</p>
+              <h1 style={{ color: '#111111', fontWeight: 900, fontSize: '18px' }}>CyberTrace</h1>
+              <p style={{ color: '#5d5b57', fontSize: '9px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Case Management &amp; Forensics Portal</p>
             </div>
           </motion.div>
 
@@ -257,7 +257,7 @@ export const Login: React.FC = () => {
                     pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Enter a valid email.' }
                   })}
                   type="email"
-                  placeholder="officer@ccms.gov"
+                  placeholder="officer@cybertrace.gov"
                   style={{
                     width: '100%',
                     paddingLeft: '2.5rem',
@@ -428,7 +428,7 @@ export const Login: React.FC = () => {
             }}>
               <p style={{ fontSize: '10.5px', color: '#5d5b57', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                 <CheckCircle style={{ width: '12px', height: '12px', color: '#10b981', flexShrink: 0 }} />
-                <span>Demo: Use <strong style={{ color: '#4b4a48' }}>admin@ccms.gov</strong> + any 6-char password</span>
+                <span>Demo: Use <strong style={{ color: '#4b4a48' }}>admin@cybertrace.gov</strong> + any 6-char password</span>
               </p>
             </motion.div>
           </form>

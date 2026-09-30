@@ -103,16 +103,14 @@ export const AuditLogs: React.FC = () => {
       </div>
 
       {/* Filter panel */}
-      <div style={{
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{
         background: '#ffffff',
         border: '1px solid rgba(255,255,255,0.05)',
         borderRadius: '14px',
         padding: '1.25rem',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
         gap: '0.75rem',
         position: 'relative'
-      }} className="grid-cols-kpi">
+      }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(59,130,246,0.2), transparent)' }} />
         
         <div style={{ position: 'relative' }}>
@@ -231,7 +229,7 @@ export const AuditLogs: React.FC = () => {
                 {currentLogs.map((log) => (
                   <tr key={log.id}>
                     <td><span style={{ fontFamily: "'JetBrains Mono', monospace", color: '#4b4a48', fontSize: '11px' }}>{log.id}</span></td>
-                    <td style={{ color: '#cbd5e1', fontWeight: 700 }}>{log.user}</td>
+                    <td style={{ color: '#111111', fontWeight: 700 }}>{log.user}</td>
                     <td>
                       <span className={getRoleColor(log.role)} style={{
                         fontSize: '9px',

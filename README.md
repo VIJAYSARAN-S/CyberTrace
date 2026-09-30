@@ -1,32 +1,19 @@
-# React + TypeScript + Vite
+# CyberTrace – Centralized Cyber Crime Case Management and Digital Forensics System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+CyberTrace is a secure, centralized web application engineered for cybercrime incident management, forensic evidence handling, investigation tracking, and cross-border digital forensic integrity workflows.
 
-Currently, two official plugins are available:
+## Key Capabilities
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Secure Case Management:** Centralized registry of cybercrime cases with category tracking, severity ranking, and status workflows.
+- **Digital Evidence Repository:** Tamper-evident evidence storage with SHA-256 cryptographic hashing and chain-of-custody tracking.
+- **Investigation Tracking:** Comprehensive activity logs, investigator assignments, evidence linking, and case timeline management.
+- **Victim & Suspect Profiles:** Dedicated dossiers and complaint histories linked with respective investigation folders.
+- **Forensic Analytics & Reporting:** Real-time dashboards, case throughput metrics, and CSV/print report export.
+- **Accountability & Auditing:** Immutable audit logs capturing session actions, role modifications, and IP records.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- **Frontend:** React 19, TypeScript, Vite
+- **Styling:** Vanilla CSS design tokens with Tailwind CSS utility integration
+- **Icons & Visuals:** Lucide React, Recharts, Framer Motion
+- **State & Persistence:** React Context with persistent local storage

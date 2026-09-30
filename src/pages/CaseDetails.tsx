@@ -205,7 +205,7 @@ export const CaseDetails: React.FC = () => {
         </div>
 
         {/* Metadata info row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '1.25rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.04)' }} className="grid-cols-kpi">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1rem', marginTop: '1.25rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
           {[
             { icon: Calendar, label: 'Date Filed', value: new Date(caseItem.complaintDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) },
             { icon: AlertTriangle, label: 'Incident Date', value: new Date(caseItem.incidentDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) },
@@ -228,7 +228,7 @@ export const CaseDetails: React.FC = () => {
               </div>
               <div>
                 <p style={{ fontSize: '8.5px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{m.label}</p>
-                <p style={{ fontSize: '11.5px', fontWeight: 650, color: '#cbd5e1', marginTop: '0.15rem' }}>{m.value}</p>
+                <p style={{ fontSize: '11.5px', fontWeight: 650, color: '#111111', marginTop: '0.15rem' }}>{m.value}</p>
               </div>
             </div>
           ))}
@@ -236,7 +236,7 @@ export const CaseDetails: React.FC = () => {
       </div>
 
       {/* Main details and sidebar info */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '1.25rem' }} className="flex-col xl:flex-row">
+      <div className="grid grid-cols-1 xl:grid-cols-[1fr_340px]" style={{ gap: '1.25rem' }}>
         
         {/* Left Side: Description, Notes & Evidence */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -317,7 +317,7 @@ export const CaseDetails: React.FC = () => {
                       <HardDrive style={{ width: '13px', height: '13px', color: '#06b6d4' }} />
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <p style={{ fontSize: '11.5px', fontWeight: 650, color: '#cbd5e1', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ev.fileName}</p>
+                      <p style={{ fontSize: '11.5px', fontWeight: 650, color: '#111111', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ev.fileName}</p>
                       <p style={{ fontSize: '9.5px', fontFamily: "'JetBrains Mono', monospace", color: '#4b4a48', marginTop: '0.15rem' }}>SHA256: {ev.sha256Hash.slice(0, 16)}…</p>
                     </div>
                     <span style={{ fontSize: '10px', color: '#5d5b57', fontWeight: 500, flexShrink: 0 }}>
@@ -365,7 +365,7 @@ export const CaseDetails: React.FC = () => {
                   {getInitials(investigator.name)}
                 </div>
                 <div>
-                  <p style={{ fontSize: '12px', fontWeight: 700, color: '#cbd5e1' }}>{investigator.name}</p>
+                  <p style={{ fontSize: '12px', fontWeight: 700, color: '#111111' }}>{investigator.name}</p>
                   <p style={{ fontSize: '10px', color: '#4b4a48', marginTop: '0.15rem' }}>{investigator.rank} — {investigator.specialty}</p>
                   <p style={{ fontSize: '10px', color: '#5d5b57', marginTop: '0.15rem' }}>{investigator.email}</p>
                 </div>
@@ -386,7 +386,7 @@ export const CaseDetails: React.FC = () => {
               <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
                 <User style={{ width: '14px', height: '14px', color: '#ef4444' }} /> Victim Target
               </h3>
-              <p style={{ fontSize: '12px', fontWeight: 700, color: '#cbd5e1' }}>{linkedVictim.name}</p>
+              <p style={{ fontSize: '12px', fontWeight: 700, color: '#111111' }}>{linkedVictim.name}</p>
               <p style={{ fontSize: '10.5px', color: '#4b4a48', marginTop: '0.2rem' }}>{linkedVictim.email}</p>
               <p style={{ fontSize: '10.5px', color: '#5d5b57', marginTop: '0.2rem' }}>{linkedVictim.contact}</p>
               {linkedVictim.address && (
@@ -408,7 +408,7 @@ export const CaseDetails: React.FC = () => {
               <h3 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
                 <AlertTriangle style={{ width: '14px', height: '14px', color: '#f59e0b' }} /> Prime Suspect
               </h3>
-              <p style={{ fontSize: '12px', fontWeight: 700, color: '#cbd5e1' }}>{linkedSuspect.name}</p>
+              <p style={{ fontSize: '12px', fontWeight: 700, color: '#111111' }}>{linkedSuspect.name}</p>
               <p style={{ fontSize: '10.5px', color: '#4b4a48', marginTop: '0.2rem' }}>Alias: {linkedSuspect.knownAlias}</p>
               <span className="badge-amber" style={{
                 fontSize: '8.5px',

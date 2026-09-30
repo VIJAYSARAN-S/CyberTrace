@@ -87,7 +87,7 @@ export const Investigators: React.FC = () => {
 
       {/* Roster Grid */}
       {filteredInvestigators.length > 0 ? (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }} className="grid-cols-kpi">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1rem' }}>
           {filteredInvestigators.map((inv) => {
             const workload = getWorkloadStatus(inv.activeCases);
             const loadPercent = Math.min((inv.activeCases / 4) * 100, 100);
@@ -133,7 +133,7 @@ export const Investigators: React.FC = () => {
                       {getInitials(inv.name)}
                     </div>
                     <div style={{ minWidth: 0 }}>
-                      <h4 style={{ fontSize: '13px', fontWeight: 700, color: '#cbd5e1', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{inv.name}</h4>
+                      <h4 style={{ fontSize: '13px', fontWeight: 700, color: '#111111', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{inv.name}</h4>
                       <p style={{ fontSize: '10px', color: '#4b4a48', fontWeight: 600, margin: '0.15rem 0 0 0' }}>{inv.rank}</p>
                     </div>
                   </div>

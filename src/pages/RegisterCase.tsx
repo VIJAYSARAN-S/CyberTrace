@@ -241,7 +241,7 @@ export const RegisterCase: React.FC = () => {
                         placeholder="e.g. Phishing Attack on Apex Logistics Inc." className="flat-input" />
                       {errors.title && <p style={{ color: '#f87171', fontSize: '10.5px', marginTop: '0.25rem', fontWeight: 550 }}>{errors.title.message}</p>}
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="grid-cols-kpi">
+                    <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem' }}>
                       <div>
                         <label className="form-label">Crime Category Classification *</label>
                         <select {...register('crimeCategory')} className="form-select" style={{ background: '#f3f1ee' }}>
@@ -255,10 +255,10 @@ export const RegisterCase: React.FC = () => {
                         </select>
                       </div>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="grid-cols-kpi">
+                    <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem' }}>
                       <div>
                         <label className="form-label">Incident Date</label>
-                        <input {...register('incidentDate')} type="date" className="flat-input" style={{ color: '#cbd5e1' }} />
+                        <input {...register('incidentDate')} type="date" className="flat-input" style={{ color: '#111111' }} />
                       </div>
                       <div>
                         <label className="form-label">Incident Location / Jurisdiction</label>
@@ -301,7 +301,7 @@ export const RegisterCase: React.FC = () => {
                         placeholder="e.g. Ramesh Kumar Sharma" className="flat-input" />
                       {errors.victimName && <p style={{ color: '#f87171', fontSize: '10.5px', marginTop: '0.25rem', fontWeight: 550 }}>{errors.victimName.message}</p>}
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="grid-cols-kpi">
+                    <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem' }}>
                       <div>
                         <label className="form-label">Email Address</label>
                         <input {...register('victimEmail')} type="email" placeholder="victim@email.com" className="flat-input" />
@@ -336,7 +336,7 @@ export const RegisterCase: React.FC = () => {
                         Suspect details are optional and can be updated as the case progresses.
                       </p>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="grid-cols-kpi">
+                    <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem' }}>
                       <div>
                         <label className="form-label">Suspect Name</label>
                         <input {...register('suspectName')} placeholder="Known or alias name" className="flat-input" />

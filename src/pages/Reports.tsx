@@ -148,7 +148,7 @@ export const Reports: React.FC = () => {
     if (!compiledReport) return;
 
     let csvContent = "data:text/csv;charset=utf-8,";
-    csvContent += `C-CCMS INCIDENT REPORT,${compiledReport.title}\n`;
+    csvContent += `CYBERTRACE INCIDENT REPORT,${compiledReport.title}\n`;
     csvContent += `Report Period,${compiledReport.period}\n`;
     csvContent += `Generated On,${new Date().toISOString().replace('T', ' ').substring(0, 19)}\n\n`;
 
@@ -191,7 +191,7 @@ export const Reports: React.FC = () => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", `ccms_report_${reportType}.csv`);
+    link.setAttribute("download", `cybertrace_report_${reportType}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -246,7 +246,7 @@ export const Reports: React.FC = () => {
       </div>
 
       {/* Control panel & Report Preview canvas */}
-      <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: '1.25rem' }} className="flex-col lg:flex-row">
+      <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr]" style={{ gap: '1.25rem' }}>
         
         {/* Configuration Column */}
         <div style={{
@@ -370,9 +370,9 @@ export const Reports: React.FC = () => {
               {/* Document Header (Letterhead) */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: '2px solid #5d5b57', paddingBottom: '1.25rem', marginBottom: '1.5rem' }}>
                 <div>
-                  <h2 style={{ fontSize: '14px', fontWeight: 800, color: '#cbd5e1', letterSpacing: '0.05em' }}>DEPARTMENT OF CYBER CRIMES</h2>
-                  <p style={{ color: '#4b4a48', fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: '0.2rem' }}>Federal Forensic Analysis Division</p>
-                  <p style={{ fontSize: '9.5px', color: '#5d5b57', fontWeight: 500, marginTop: '0.15rem' }}>Document Ref: C-CCMS-SEC-9988</p>
+                  <h2 style={{ fontSize: '14px', fontWeight: 800, color: '#111111', letterSpacing: '0.05em' }}>CYBERTRACE – CENTRALIZED CYBER CRIME CASE MANAGEMENT</h2>
+                  <p style={{ color: '#4b4a48', fontSize: '9px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: '0.2rem' }}>Digital Forensics &amp; Incident Response Division</p>
+                  <p style={{ fontSize: '9.5px', color: '#5d5b57', fontWeight: 500, marginTop: '0.15rem' }}>Document Ref: CYBERTRACE-SEC-9988</p>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{
@@ -402,7 +402,7 @@ export const Reports: React.FC = () => {
               {/* 1. Daily/Weekly/Monthly metrics */}
               {compiledReport.metrics && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '1.25rem' }} className="grid-cols-kpi">
+                  <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: '0.75rem', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '1.25rem' }}>
                     {compiledReport.metrics.map((m: any) => (
                       <div key={m.label} style={{ padding: '0.75rem 1rem', border: '1px solid rgba(255,255,255,0.03)', background: 'rgba(255,255,255,0.01)', borderRadius: '10px' }}>
                         <span style={{ fontSize: '8.5px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block' }}>{m.label}</span>

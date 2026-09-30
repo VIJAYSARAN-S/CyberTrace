@@ -29,7 +29,7 @@ export const Settings: React.FC = () => {
   const { register: regProfile, handleSubmit: handleProfileSubmit } = useForm<ProfileInput>({
     defaultValues: {
       name: currentUser?.name || 'Administrator',
-      email: currentUser?.email || 'admin@ccms.gov'
+      email: currentUser?.email || 'admin@cybertrace.gov'
     }
   });
 
@@ -73,7 +73,7 @@ export const Settings: React.FC = () => {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '1.25rem' }} className="flex-col xl:flex-row">
+      <div className="grid grid-cols-1 xl:grid-cols-[1fr_300px]" style={{ gap: '1.25rem' }}>
         
         {/* Left Columns: Forms */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -92,7 +92,7 @@ export const Settings: React.FC = () => {
               Officer Profile Credentials
             </h3>
             <form onSubmit={handleProfileSubmit(onProfileSave)} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="grid-cols-kpi">
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem' }}>
                 <div>
                   <label className="form-label">Official Name</label>
                   <input
@@ -136,7 +136,7 @@ export const Settings: React.FC = () => {
               Rotation of Tactical Passcode
             </h3>
             <form onSubmit={handlePasswordSubmit(onPasswordSave)} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }} className="grid-cols-kpi">
+              <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: '1rem' }}>
                 <div>
                   <label className="form-label">Current Passcode</label>
                   <input
@@ -192,7 +192,7 @@ export const Settings: React.FC = () => {
               <Bell style={{ width: '14px', height: '14px', color: '#fbbf24' }} />
               Alerts & Notifications
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '12px', color: '#cbd5e1', fontWeight: 550 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '12px', color: '#4b4a48', fontWeight: 550 }}>
               <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', cursor: 'pointer' }}>
                 <input
                   type="checkbox"
@@ -236,9 +236,9 @@ export const Settings: React.FC = () => {
               borderRadius: '10px',
               padding: '0.75rem 1rem'
             }}>
-              <span style={{ fontSize: '9px', fontWeight: 800, color: '#60a5fa', letterSpacing: '0.05em', display: 'block', textTransform: 'uppercase' }}>Theme Lock</span>
-              <p style={{ fontSize: '11.5px', color: '#cbd5e1', lineHeight: 1.5, fontWeight: 500, marginTop: '0.25rem' }}>
-                SYSTEM LOCK: Agency Dark Theme is enforced by tactical command security profiles. Light mode disabled by policy.
+              <span style={{ fontSize: '9px', fontWeight: 800, color: '#111111', letterSpacing: '0.05em', display: 'block', textTransform: 'uppercase' }}>Theme Directive</span>
+              <p style={{ fontSize: '11.5px', color: '#4b4a48', lineHeight: 1.5, fontWeight: 500, marginTop: '0.25rem' }}>
+                SYSTEM LOCK: CyberTrace Secure Forensic Theme is active. Visual profiles are managed by tactical command policy.
               </p>
             </div>
           </div>
@@ -268,7 +268,7 @@ export const Settings: React.FC = () => {
                 </select>
               </div>
               
-              <label style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12px', color: '#cbd5e1', fontWeight: 550, cursor: 'pointer' }}>
+              <label style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12px', color: '#4b4a48', fontWeight: 550, cursor: 'pointer' }}>
                 <span>Enforce 2-Factor Authentication</span>
                 <input
                   type="checkbox"

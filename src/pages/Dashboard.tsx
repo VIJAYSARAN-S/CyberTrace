@@ -159,7 +159,7 @@ export const Dashboard: React.FC = () => {
       </div>
 
       {/* KPI Cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }} className="grid-cols-kpi">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1rem' }}>
         {kpiCards.map((card) => {
           const Icon = card.icon;
           return (
@@ -244,7 +244,7 @@ export const Dashboard: React.FC = () => {
       </div>
 
       {/* Charts + Activity Row */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '1.25rem' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px]" style={{ gap: '1.25rem' }}>
         {/* Case Activity Area Chart */}
         <div style={{
           background: '#ffffff',
@@ -434,7 +434,7 @@ export const Dashboard: React.FC = () => {
                         {c.id}
                       </Link>
                     </td>
-                    <td style={{ color: '#cbd5e1', fontWeight: 500 }}>{c.crimeCategory}</td>
+                    <td style={{ color: '#111111', fontWeight: 500 }}>{c.crimeCategory}</td>
                     <td style={{ color: '#6b7280' }}>{linkedVic?.name || 'Unknown'}</td>
                     <td style={{ color: '#6b7280' }}>{assignedInv?.name || 'Unassigned'}</td>
                     <td>{renderPriorityBadge(c.priority)}</td>

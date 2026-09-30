@@ -85,7 +85,7 @@ const NotFound: React.FC = () => {
             transition: 'all 200ms ease'
           }}
         >
-          Return to Command Center
+          Return to CyberTrace
         </Link>
       </div>
     </div>

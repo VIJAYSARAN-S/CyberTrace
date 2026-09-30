@@ -94,7 +94,7 @@ export const Evidence: React.FC = () => {
   const handleDownload = (ev: typeof evidence[0], e: React.MouseEvent) => {
     e.stopPropagation();
     
-    const fileContent = `CCMS SECURE FORENSIC RECORD
+    const fileContent = `CYBERTRACE SECURE FORENSIC RECORD
 ---------------------------
 Evidence ID: ${ev.id}
 Case ID: ${ev.caseId}
@@ -106,19 +106,19 @@ Upload Timestamp: ${ev.uploadDate}
 Description: ${ev.description}
 Size: ${ev.size}
 ---------------------------
-C-CCMS SECURED EXPORT`;
+CYBERTRACE SECURED EXPORT`;
 
     const blob = new Blob([fileContent], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `CCMS_${ev.id}_${ev.fileName}.txt`;
+    link.download = `CyberTrace_${ev.id}_${ev.fileName}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
     
-    showToast(`Forensic manifest CCMS_${ev.id}.txt downloaded successfully.`, 'success');
+    showToast(`Forensic manifest CyberTrace_${ev.id}.txt downloaded successfully.`, 'success');
   };
 
   const getEvidenceIcon = (type: string) => {
@@ -177,22 +177,20 @@ C-CCMS SECURED EXPORT`;
         </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '1.25rem' }} className="flex-col lg:flex-row">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px]" style={{ gap: '1.25rem' }}>
         
         {/* Main Evidence Grid */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           
           {/* Filters Panel */}
-          <div style={{
+          <div className="grid grid-cols-1 sm:grid-cols-3" style={{
             background: '#ffffff',
             border: '1px solid rgba(255,255,255,0.05)',
             borderRadius: '14px',
             padding: '1.25rem',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '0.75rem',
             position: 'relative'
-          }} className="grid-cols-kpi">
+          }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(59,130,246,0.2), transparent)' }} />
             
             <div style={{ position: 'relative' }}>
@@ -271,7 +269,7 @@ C-CCMS SECURED EXPORT`;
           </div>
 
           {/* Evidence Card Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }} className="grid-cols-kpi">
+          <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: '1rem' }}>
             {filteredEvidence.length > 0 ? (
               filteredEvidence.map((ev) => (
                 <div
@@ -314,7 +312,7 @@ C-CCMS SECURED EXPORT`;
                       <span style={{ fontSize: '10px', fontWeight: 700, fontFamily: "'JetBrains Mono', monospace", color: '#4b4a48' }}>{ev.id}</span>
                     </div>
                     
-                    <h4 style={{ fontSize: '12.5px', fontWeight: 700, color: '#cbd5e1', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={ev.fileName}>
+                    <h4 style={{ fontSize: '12.5px', fontWeight: 700, color: '#111111', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={ev.fileName}>
                       {ev.fileName}
                     </h4>
                     <p style={{ fontSize: '9.5px', fontFamily: "'JetBrains Mono', monospace", color: '#3b82f6', marginTop: '0.15rem' }}>{ev.caseId}</p>
@@ -507,38 +505,38 @@ C-CCMS SECURED EXPORT`;
                 </div>
                 <div>
                   <span style={{ fontSize: '9px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Evidence Classification</span>
-                  <span style={{ fontWeight: 600, color: '#cbd5e1', display: 'block', marginTop: '0.2rem' }}>{selectedEv.evidenceType}</span>
+                  <span style={{ fontWeight: 600, color: '#111111', display: 'block', marginTop: '0.2rem' }}>{selectedEv.evidenceType}</span>
                 </div>
                 <div>
                   <span style={{ fontSize: '9px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Logged By Officer</span>
-                  <span style={{ fontWeight: 600, color: '#cbd5e1', display: 'block', marginTop: '0.2rem' }}>{selectedEv.uploadedBy}</span>
+                  <span style={{ fontWeight: 600, color: '#111111', display: 'block', marginTop: '0.2rem' }}>{selectedEv.uploadedBy}</span>
                 </div>
                 <div>
                   <span style={{ fontSize: '9px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Intake Date</span>
-                  <span style={{ fontWeight: 600, color: '#cbd5e1', display: 'block', marginTop: '0.2rem' }}>{selectedEv.uploadDate}</span>
+                  <span style={{ fontWeight: 600, color: '#111111', display: 'block', marginTop: '0.2rem' }}>{selectedEv.uploadDate}</span>
                 </div>
                 <div style={{ gridColumn: 'span 2' }}>
                   <span style={{ fontSize: '9px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em' }}>SHA-256 Signature Code</span>
                   <span style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: '10px',
-                    color: '#4b4a48',
+                    color: '#111111',
                     background: '#f3f1ee',
                     padding: '0.5rem',
                     borderRadius: '8px',
-                    border: '1px solid rgba(255,255,255,0.03)',
+                    border: '1px solid #d9d3ce',
                     display: 'block',
                     marginTop: '0.2rem',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap'
+                    wordBreak: 'break-all',
+                    whiteSpace: 'normal',
+                    lineHeight: 1.5
                   }}>
                     {selectedEv.sha256Hash}
                   </span>
                 </div>
                 <div style={{ gridColumn: 'span 2' }}>
                   <span style={{ fontSize: '9px', fontWeight: 700, color: '#5d5b57', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Incident Context</span>
-                  <p style={{ color: '#cbd5e1', marginTop: '0.2rem', lineHeight: 1.5 }}>{selectedEv.description}</p>
+                  <p style={{ color: '#111111', marginTop: '0.2rem', lineHeight: 1.5 }}>{selectedEv.description}</p>
                 </div>
               </div>
 

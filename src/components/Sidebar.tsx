@@ -142,7 +142,7 @@ const SidebarContent: React.FC<{
                   whiteSpace: 'nowrap',
                   lineHeight: 1.2
                 }}>
-                  CYBERFORGE
+                  CYBERTRACE
                 </div>
               </div>
             </motion.div>
@@ -254,7 +254,7 @@ const SidebarContent: React.FC<{
               height: '9px',
               borderRadius: '50%',
               background: '#10b981',
-              border: '2px solid #0d1425',
+              border: '2px solid #f3f1ee',
               boxShadow: '0 0 6px rgba(16, 185, 129, 0.6)'
             }} />
           </div>
@@ -264,7 +264,7 @@ const SidebarContent: React.FC<{
                 <p style={{
                   fontSize: '11px',
                   fontWeight: 700,
-                  color: '#cbd5e1',
+                  color: '#111111',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
@@ -334,7 +334,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed, mobil
               exit={{ x: -280 }}
               transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="relative w-64 h-full flex flex-col"
-              style={{ background: '#0d1425' }}
+              style={{ background: '#f3f1ee' }}
             >
               <button
                 onClick={() => setMobileOpen(false)}

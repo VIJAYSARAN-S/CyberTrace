@@ -123,7 +123,7 @@ export const DbProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     const timeStr = today.toTimeString().split(' ')[0];
     const newLog: AuditLog = {
       id: `LOG-${String(auditLogs.length + 1).padStart(3, '0')}`,
-      user: currentUser?.email || 'anonymous@ccms.gov',
+      user: currentUser?.email || 'anonymous@cybertrace.gov',
       role: currentUser?.role || 'Admin',
       action,
       date: dateStr,

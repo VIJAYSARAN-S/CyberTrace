@@ -97,13 +97,21 @@ export const TopBar: React.FC<TopBarProps> = ({ sidebarCollapsed, setSidebarColl
     else navigate(`/suspects?id=${id}`);
   };
 
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <header style={{
       height: '64px',
       position: 'fixed',
       top: 0,
       right: 0,
-      left: 0,
+      left: isDesktop ? (sidebarCollapsed ? 72 : 260) : 0,
+      transition: 'left 250ms cubic-bezier(0.4, 0, 0.2, 1)',
       zIndex: 20,
       background: '#f3f1ee',
       borderBottom: '1px solid #d9d3ce',

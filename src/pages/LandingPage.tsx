@@ -79,7 +79,7 @@ export const LandingPage: React.FC = () => {
 
       <main>
         <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '4.5rem 1.5rem 2rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 1.15fr', gap: '2.5rem', alignItems: 'center' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '2.5rem', alignItems: 'center' }}>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#ffffff', border: '1px solid #d9d3ce', borderRadius: '999px', padding: '0.4rem 0.7rem', fontSize: '11px', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#4b4a48' }}>
                 <CheckCircle2 style={{ width: '14px', height: '14px', color: '#111111' }} />
@@ -90,8 +90,8 @@ export const LandingPage: React.FC = () => {
                 CyberTrace
               </h1>
 
-              <h2 style={{ marginTop: '1rem', fontSize: 'clamp(1.1rem, 2vw, 2rem)', lineHeight: '1.3', letterSpacing: '-0.04em', fontWeight: 700, color: '#4b4a48' }}>
-                Digital Crime Investigation &amp; Evidence Management System
+              <h2 style={{ marginTop: '1rem', fontSize: 'clamp(1.1rem, 2vw, 1.75rem)', lineHeight: '1.3', letterSpacing: '-0.04em', fontWeight: 700, color: '#4b4a48' }}>
+                Centralized Cyber Crime Case Management and Digital Forensics System
               </h2>
 
               <p style={{ maxWidth: '620px', marginTop: '1.1rem', color: '#5d5b57', fontSize: '1.05rem', lineHeight: 1.7 }}>
@@ -183,7 +183,7 @@ export const LandingPage: React.FC = () => {
             <h3 style={{ marginTop: '0.6rem', fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.05em', fontWeight: 800 }}>Built for secure digital investigations</h3>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '1.2rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: '1.2rem' }}>
             {features.map(({ title, description, icon: Icon }) => (
               <div key={title} style={{ background: '#ffffff', border: '1px solid #d9d3ce', borderRadius: '18px', padding: '1.4rem', boxShadow: '0 18px 40px rgba(0,0,0,0.03)' }}>
                 <div style={{ width: '42px', height: '42px', background: '#f7f5f1', border: '1px solid #d9d3ce', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.9rem' }}>
@@ -202,7 +202,7 @@ export const LandingPage: React.FC = () => {
             <h3 style={{ marginTop: '0.6rem', fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.05em', fontWeight: 800 }}>From intake to resolution</h3>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '1rem' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1rem' }}>
             {steps.map((step) => (
               <div key={step.id} style={{ padding: '1.2rem', background: '#ffffff', border: '1px solid #d9d3ce', borderRadius: '18px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 800, letterSpacing: '0.12em', color: '#5d5b57', marginBottom: '0.9rem' }}>{step.id}</div>
@@ -215,7 +215,7 @@ export const LandingPage: React.FC = () => {
 
         <section id="security" style={{ maxWidth: '1200px', margin: '0 auto', padding: '5rem 1.5rem 1.5rem' }}>
           <div style={{ background: '#ffffff', border: '1px solid #d9d3ce', borderRadius: '24px', padding: '2rem', boxShadow: '0 24px 60px rgba(0,0,0,0.04)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '2rem', alignItems: 'center' }}>
               <div>
                 <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5d5b57' }}>Forensic trust</p>
                 <h3 style={{ marginTop: '0.65rem', fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.05em', fontWeight: 800 }}>Built for Digital Evidence Integrity</h3>
@@ -265,7 +265,7 @@ export const LandingPage: React.FC = () => {
               </div>
               <div style={{ fontSize: '14px', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase' }}>CyberTrace</div>
             </div>
-            <p style={{ fontSize: '0.96rem', lineHeight: 1.7, color: '#5d5b57', margin: 0 }}>Digital Crime Investigation &amp; Evidence Management System</p>
+            <p style={{ fontSize: '0.96rem', lineHeight: 1.7, color: '#5d5b57', margin: 0 }}>Centralized Cyber Crime Case Management and Digital Forensics System</p>
           </div>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', color: '#4b4a48', fontSize: '0.95rem' }}>
